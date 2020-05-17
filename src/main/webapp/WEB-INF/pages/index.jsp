@@ -8,5 +8,6 @@
 </head>
 <body>
 <H1> New Index File</H1>
+<p/> <a href="dbresult">DataBase</a>
 </body>
 </html>
