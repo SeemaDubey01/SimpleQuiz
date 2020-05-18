@@ -3,6 +3,8 @@ package com.simple.simple;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class SimpleQuizController {
 
 	@RequestMapping("/")
-	public String index() {
-	System.out.println("inside index");
-	
+	public String index(HttpSession session) {
+	String session1 = session.getId();
+	System.out.println("inside index " + session1);
 	return "index";
 	}
 	
@@ -23,7 +25,7 @@ public class SimpleQuizController {
 	@RequestMapping("/dbresult")
 	public String dbresult(Model model) {
 		System.out.println("inside dbresult");
-		List<UserDetail> list = new ArrayList<UserDetail>();
+		List<deQuizUser> list = new ArrayList<deQuizUser>();
 		list = userRepo.findAll();
 		model.addAttribute("list", list);
 		System.out.println("Size of the list is "+list.size());
