@@ -9,7 +9,7 @@
 <title>DeQuiz - Search Question</title>
 </head>
 <body>
-<div align="center" style="font-size:8vw;">
+<div align="center" style="font-size:5vw;">
 	<h2>Search Question: </h2>
 	<form:form action="/displayquestion" method="post" modelAttribute="deQuizQuestions">
 	<table>

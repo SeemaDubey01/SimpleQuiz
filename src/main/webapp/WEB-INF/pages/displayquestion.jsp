@@ -9,7 +9,7 @@
 <title>DeQuiz - Create Confirm</title>
 </head>
 <body>
-<div align="center" style="font-size:8vw;">
+<div align="center" style="font-size:5vw;">
 		<h2>Search Question:</h2>
 			<form:form  action="/searchquestion" method="get" modelAttribute="deQuizQuestions">
 			<table>
