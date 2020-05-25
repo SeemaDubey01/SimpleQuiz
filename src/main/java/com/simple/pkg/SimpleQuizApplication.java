@@ -1,4 +1,4 @@
-package com.simple.simple;
+package com.simple.pkg;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

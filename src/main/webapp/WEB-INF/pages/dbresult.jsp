@@ -16,7 +16,7 @@
 			<span>Element2</span><span>${list.get(1).toString()}</span> <br/>
 			<span>Element3</span><span>${list.get(2).toString()}</span>
 		</form:form>
-	</div>
+</div>
 <a href="/">Back</a>
 </body>
 </html>

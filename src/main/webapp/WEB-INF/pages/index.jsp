@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>   
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,5 +10,11 @@
 <body>
 <H1> New Index File</H1>
 <p/> <a href="dbresult">DataBase</a>
+<p/> <a href="dbquestion">DataBase Question</a>
+<p/> <a href="dbtest">DataBase Test</a>
+<p/> <a href="register">Register for Quiz</a>
+<p/> <a href="createquiz">Create Quiz</a>
+<p/> <a href="createquizv2">Create QuizV2</a>
+<p/> <a href="searchquestion">Search Question</a>
 </body>
 </html>

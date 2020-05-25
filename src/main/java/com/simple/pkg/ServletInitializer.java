@@ -1,4 +1,4 @@
-package com.simple.simple;
+package com.simple.pkg;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
