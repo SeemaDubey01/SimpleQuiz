@@ -34,7 +34,7 @@
 			</table>
 			<form:button>Create Another Question</form:button>
 			</form:form>
-			<span cssStyle="appearance: button"><a href="/">Home</a></span>
+			<a href="/">Home</a>
 
 </div>
 </body>

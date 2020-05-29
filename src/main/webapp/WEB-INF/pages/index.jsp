@@ -9,12 +9,14 @@
 </head>
 <body>
 <H1> New Index File</H1>
-<p/> <a href="dbresult">DataBase</a>
-<p/> <a href="dbquestion">DataBase Question</a>
-<p/> <a href="dbtest">DataBase Test</a>
+<p/> <a href="dbresult">Test DataBase Display</a>
+<p/> <a href="dbquestion">All Questions</a>
+<p/> <a href="dbtest">DataBase Test with timer</a>
 <p/> <a href="register">Register for Quiz</a>
 <p/> <a href="createquiz">Create Quiz</a>
 <p/> <a href="createquizv2">Create QuizV2</a>
 <p/> <a href="searchquestion">Search Question</a>
+<p/> <a href="listener">Listen</a>
+<p/> <a href="publisher">Publish</a>
 </body>
 </html>

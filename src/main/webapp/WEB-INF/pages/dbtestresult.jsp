@@ -13,6 +13,7 @@
 <form:form  action = "/dbtest" modelAttribute="dqtest">
 <p> Record is ----- Quiz#: <span>${dqtest.dqtQuizNo}</span> and name: 
 <span>${dqtest.dqtUserName}</span> </p>
+Your marks: ${dqtest.dqtMarks}
 </form:form>
 <a href="/"> Back</a>
 </body>

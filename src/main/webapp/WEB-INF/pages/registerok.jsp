@@ -10,12 +10,13 @@
 <body>
 <H2>Registration Status <span></span></H2>
 
-<form:form action="/startquiz" method="get" modelAttribute="user">
-	<form:hidden path="dquQuizId" value ="${user.dquQuizId}"/>
-	<form:hidden path="dquUserName" value ="${user.dquUserName}"/>
-	<form:label path="dquQuizId">Quiz#: <span>${user.dquQuizId}</span></form:label><p/>
-	<form:label path="dquUserName">Quiz#: <span>${user.dquUserName}</span></form:label><p/>
-	<form:label path="dquSessionId">Quiz#: <span>${user.dquSessionId}</span></form:label><p/>
+<form:form action="/startquiz" method="post"  modelAttribute="deQuizUser">
+	<form:hidden path="dquQuizId" value ="${deQuizUser.dquQuizId}"/>
+	<form:hidden path="dquUserId" value ="${deQuizUser.dquUserId}"/>
+	<form:hidden path="dquQuestionNo" value ="${deQuizUser.dquQuestionNo}"/>
+	<form:label path="dquQuizId">Quiz#: <span>${deQuizUser.dquQuizId}</span></form:label><p/>
+	<form:label path="dquUserName">Quiz#: <span>${deQuizUser.dquUserName}</span></form:label><p/>
+	<form:label path="dquSessionId">Quiz#: <span>${deQuizUser.dquSessionId}</span></form:label><p/>
 	<form:button>Continue</form:button>
 </form:form>		
 

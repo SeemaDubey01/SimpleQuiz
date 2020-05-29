@@ -4,11 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class DeQuizMaster {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer deqmSrNbr;
 	private Integer deqmQuizId;
 	private Integer deqmQuestionNo;
@@ -18,6 +18,12 @@ public class DeQuizMaster {
 	private String deqmOption_c;
 	private String deqmOption_d; 
 	private String deqmAnswer;
+	private String deqmQuizActive;
+	
+	@Transient
+	private String selectedAnswer;
+	@Transient
+	private Integer dquUserId;
 
 	//@OneToMany
 	//@JoinColumn(referencedColumnName="dequizuserlist_dquUserId")
@@ -95,6 +101,24 @@ public class DeQuizMaster {
 		deqmOption_d = " ";
 		deqmAnswer = " ";
 		return deqmQuestionNo;
+	}
+	public String getDeqmQuizActive() {
+		return deqmQuizActive;
+	}
+	public void setDeqmQuizActive(String deqmQuizActive) {
+		this.deqmQuizActive = deqmQuizActive;
+	}
+	public String getSelectedAnswer() {
+		return selectedAnswer;
+	}
+	public void setSelectedAnswer(String selectedAnswer) {
+		this.selectedAnswer = selectedAnswer;
+	}
+	public Integer getDquUserId() {
+		return dquUserId;
+	}
+	public void setDquUserId(Integer dquUserId) {
+		this.dquUserId = dquUserId;
 	}
 }
 

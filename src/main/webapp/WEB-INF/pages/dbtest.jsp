@@ -8,11 +8,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 <script>
-	var remainingSec = 15;
+	var remainingSec = 10;
+	var marks = 1000;
 	setInterval(function(){
-		$("#timer").text ("Time remaining " + remainingSec + " seconds")
+		$("#timer").text (remainingSec);
 		remainingSec = remainingSec - 1;
-		if (remainingSec <0 ) form.submit();
+		if (remainingSec < 0 ) $("#quizform").submit();
+
+		setInterval(function(){
+			marks = marks - 2;
+			if (marks < 0 ) marks =0;
+			$("#dqtMarks").attr("value",marks);
+			$("#tmarks").text (marks);
+		},100);
+
 	},1000);
 </script>
 
@@ -27,9 +36,13 @@
 		<form:input path="dqtQuizNo" value="1" type="int"></form:input><p/>
 		User Name:
 		<form:input path="dqtUserName" value="MD"></form:input><p/>
+		<form:hidden path="dqtMarks" id="dqtMarks" value=" " />
 		<form:button>submit</form:button>
 	</form:form><p/>
-	<p id="timer"></p>
+	<table Style="border:1px solid black; width:200px">
+	<tr><td>Time remaining: <span id="timer">10</span> Seconds</td></tr>
+	<tr><td>Marks: <span id="tmarks">1000</span> points</td></tr>
+	</table>
 </div>
 </body>
 </html>

@@ -18,7 +18,7 @@ public class DeQuizQMController {
 	@GetMapping("/createquiz")
 	private String CrateQuiz(@ModelAttribute("quizmaster") DeQuizMaster quizmaster, Model model) {
 		if (quizmaster.getDeqmQuizId() == null ) {
-			quizmaster.setDeqmQuizId(105);
+			quizmaster.setDeqmQuizId(110);
 			quizmaster.setDeqmQuestionNo(1);
 		} 
 		model.addAttribute("quizmaster", quizmaster);
@@ -29,6 +29,8 @@ public class DeQuizQMController {
 	private String CreateQuizStatus(@ModelAttribute("quizmaster") DeQuizMaster quizmaster, Model model) {
 	
 // insert the quiz into DeQuizMaster table
+		Integer quizSrNo = quizmaster.getDeqmQuizId() * 100 + quizmaster.getDeqmQuestionNo();
+		quizmaster.setDeqmSrNbr(quizSrNo);
 		dequizMasterrepo.save(quizmaster);
 		quizmaster.nextQustionNo();
 

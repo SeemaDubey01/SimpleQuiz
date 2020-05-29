@@ -103,7 +103,6 @@ public class SimpleQuizController {
 		DeQuizTest dqtest = new DeQuizTest();
 		Instant instant = Instant.now();
 		long timeStampMillis = instant.toEpochMilli();
-
 		model.addAttribute("dqtest", dqtest);
 		System.out.println("inside dbtest");
 		System.out.println("Entered value is---" + dqtest);

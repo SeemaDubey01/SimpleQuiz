@@ -10,25 +10,29 @@
 <body>
 <h1>Start Quiz</h1>
 <!--  question number and question -->
-<form:form action="/getResult"  method="post" modelAttribute="dquizMaster">
+<form:form action="/showresult"  method="post" modelAttribute="deQuizMaster">
   <div>
-  <div>${dquizMaster.deqmQuestion}</div>
+  <div>${deQuizMaster.deqmQuestion}</div>
   </div>
   <div>
-  <form:radiobutton  path="selectedAnswer" readonly="true" cssStyle="color: white;background-color:DodgerBlue" value = "a" />
-  <form:input path="deqmOption_a" readonly="true" cssStyle="color: white;background-color:DodgerBlue" value = " ${dquizMaster.deqmOption_a}" />
+  <form:hidden path="deqmQuizId" value="${deQuizMaster.deqmQuizId}"/>
+  <form:hidden path="deqmQuestionNo" value="${deQuizMaster.deqmQuestionNo}"/>
+  <form:hidden path="dquUserId" value="${deQuizMaster.dquUserId}"/>
+  <form:hidden path="deqmAnswer" value="${deQuizMaster.deqmAnswer}"/>
+  <form:radiobutton path="selectedAnswer" readonly="true" cssStyle="color: white;background-color:Red" value = "a" /> 
+  <form:input path="deqmOption_a" readonly="true" cssStyle="color: white;background-color:DodgerBlue" value = " ${deQuizMaster.deqmOption_a}" />
   </div><br/>
   <div>
   <form:radiobutton path="selectedAnswer" readonly="true" cssStyle="color: white;background-color:Red" value = "b" /> 
-  <form:input path="deqmOption_b" readonly="true" cssStyle="color: white;background-color:Red" value = " ${dquizMaster.deqmOption_b}" />
+  <form:input path="deqmOption_b" readonly="true" cssStyle="color: white;background-color:Red" value = " ${deQuizMaster.deqmOption_b}" />
   </div><br/>
   <div>
   <form:radiobutton path="selectedAnswer" readonly="true" cssStyle="color: white;background-color:Green" value = "c" />
-  <form:input path="deqmOption_c" readonly="true" cssStyle="color: white;background-color:Green" value = " ${dquizMaster.deqmOption_c}" />
+  <form:input path="deqmOption_c" readonly="true" cssStyle="color: white;background-color:Green" value = " ${deQuizMaster.deqmOption_c}" />
   </div><br/>
   <div>
   <form:radiobutton path="selectedAnswer" readonly="true" cssStyle="color: white;background-color:Orange" value = "d" /> 
-  <form:input path="deqmOption_d" readonly="true" cssStyle="color: white;background-color:Orange" value = " ${dquizMaster.deqmOption_d}" /> 
+  <form:input path="deqmOption_d" readonly="true" cssStyle="color: white;background-color:Orange" value = " ${deQuizMaster.deqmOption_d}" /> 
   </div><br/>
   <form:button>submit</form:button>
 </form:form>

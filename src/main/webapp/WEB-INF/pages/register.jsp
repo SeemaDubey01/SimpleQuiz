@@ -10,7 +10,7 @@
 <body>
 	<div align="center">
 		<h2>Participants please enter details</h2>
-		<form:form action="/register" method="post" modelAttribute="user">
+		<form:form action="/register" method="post" modelAttribute="deQuizUser">
 			<form:label path="dquQuizId">Quiz#:</form:label>
 			<form:input path="dquQuizId" type = "number" />
 			<form:errors path="dquQuizId" />

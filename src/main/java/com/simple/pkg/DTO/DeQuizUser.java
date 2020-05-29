@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 
 @Entity
@@ -17,6 +18,9 @@ public class DeQuizUser {
 	private Integer dquMarks;
 	private String dquAnswer;
 	private Integer dquTotalMarks;
+	
+	@Transient
+	private Integer dquQuestionNo;
 	
 	//@ManyToOne
 	//private DeQuizMaster dequizmaster;
@@ -64,6 +68,12 @@ public class DeQuizUser {
 		this.dquTotalMarks = dquTotalMarks;
 	}
 
+	public Integer getDquQuestionNo() {
+		return dquQuestionNo;
+	}
+	public void setDquQuestionNo(Integer dquQuestionNo) {
+		this.dquQuestionNo = dquQuestionNo;
+	}
 	@Override
 	public String toString() {
 		return "userId = " + dquUserId + "quizId: " + dquQuizId + " userName: " + dquUserName + " session id: " + dquSessionId + " marks: " + dquMarks ;
