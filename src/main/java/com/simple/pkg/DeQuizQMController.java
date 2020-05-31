@@ -18,7 +18,7 @@ public class DeQuizQMController {
 	@GetMapping("/createquiz")
 	private String CrateQuiz(@ModelAttribute("quizmaster") DeQuizMaster quizmaster, Model model) {
 		if (quizmaster.getDeqmQuizId() == null ) {
-			quizmaster.setDeqmQuizId(110);
+			quizmaster.setDeqmQuizId(102);
 			quizmaster.setDeqmQuestionNo(1);
 		} 
 		model.addAttribute("quizmaster", quizmaster);

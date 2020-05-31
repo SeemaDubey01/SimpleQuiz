@@ -1,8 +1,6 @@
 package com.simple.pkg.DTO;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Transient;
 
@@ -19,6 +17,7 @@ public class DeQuizMaster {
 	private String deqmOption_d; 
 	private String deqmAnswer;
 	private String deqmQuizActive;
+	private Integer deqmTimer;
 	
 	@Transient
 	private String selectedAnswer;
@@ -119,6 +118,12 @@ public class DeQuizMaster {
 	}
 	public void setDquUserId(Integer dquUserId) {
 		this.dquUserId = dquUserId;
+	}
+	public Integer getDeqmTimer() {
+		return deqmTimer;
+	}
+	public void setDeqmTimer(Integer deqmTimer) {
+		this.deqmTimer = deqmTimer;
 	}
 }
 

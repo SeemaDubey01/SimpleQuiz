@@ -25,8 +25,12 @@
 			<form:input path="deqmOption_c" /><p/>
 			<form:label path="deqmOption_d"> Option D: </form:label>
 			<form:input path="deqmOption_d" /><p/>
-			<form:label path="deqmAnswer"> Correct option: </form:label>
-			<form:input path="deqmAnswer" length="1"/><p/>
+			<form:label path="deqmAnswer"> Correct option: </form:label><p/>
+			<form:input path="deqmAnswer" /><p/>
+			<form:label path="deqmQuizActive"> Active: </form:label>
+			<form:input path="deqmQuizActive" value="Y" /><p/>
+			<form:label path="deqmTimer"> Timer (seconds): </form:label>
+			<form:input path="deqmTimer" value="15" /><p/>
 			<form:button>submit</form:button>
 		</form:form>
 	</div>

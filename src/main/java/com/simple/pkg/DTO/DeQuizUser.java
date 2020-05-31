@@ -20,6 +20,8 @@ public class DeQuizUser {
 	private Integer dquTotalMarks;
 	
 	@Transient
+	private String dquCorrectAns;
+	@Transient
 	private Integer dquQuestionNo;
 	
 	//@ManyToOne
@@ -73,6 +75,12 @@ public class DeQuizUser {
 	}
 	public void setDquQuestionNo(Integer dquQuestionNo) {
 		this.dquQuestionNo = dquQuestionNo;
+	}
+	public String getDquCorrectAns() {
+		return dquCorrectAns;
+	}
+	public void setDquCorrectAns(String dquCorrectAns) {
+		this.dquCorrectAns = dquCorrectAns;
 	}
 	@Override
 	public String toString() {
