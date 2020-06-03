@@ -5,8 +5,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.simple.pkg.DeQuizQuestionsRepo;
 import com.simple.pkg.DTO.DeQuizQuestions;
-import com.simple.pkg.repo.DeQuizQuestionsRepo;
 
 @Component
 public class DeQuizQuestionDAO {

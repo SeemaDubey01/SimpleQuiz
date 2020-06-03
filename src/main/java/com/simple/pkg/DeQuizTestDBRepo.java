@@ -1,4 +1,4 @@
-package com.simple.pkg.repo;
+package com.simple.pkg;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

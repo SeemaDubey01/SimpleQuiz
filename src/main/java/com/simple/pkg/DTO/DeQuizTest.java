@@ -1,14 +1,12 @@
 package com.simple.pkg.DTO;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class DeQuizTest {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	
 	private Integer dqtSr;
 	private Integer dqtQuizNo;
 	private String dqtUserName;

@@ -24,10 +24,6 @@ public class DeQuizMaster {
 	@Transient
 	private Integer dquUserId;
 
-	//@OneToMany
-	//@JoinColumn(referencedColumnName="dequizuserlist_dquUserId")
-	//private List<DeQuizUser> dequizuserlist;
-	
 	public Integer getDeqmSrNbr() {
 		return deqmSrNbr;
 	}

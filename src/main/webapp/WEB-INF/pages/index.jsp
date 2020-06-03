@@ -18,5 +18,6 @@
 <p/> <a href="searchquestion">Search Question</a>
 <p/> <a href="listener">Listen</a>
 <p/> <a href="publisher">Publish</a>
+<p/> <a href="registerquiz2">Register Multiplayer Quiz</a>
 </body>
 </html>

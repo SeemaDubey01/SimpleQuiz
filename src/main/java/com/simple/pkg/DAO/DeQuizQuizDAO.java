@@ -3,8 +3,8 @@ package com.simple.pkg.DAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.simple.pkg.DeQuizQuizRepo;
 import com.simple.pkg.DTO.DeQuizQuiz;
-import com.simple.pkg.repo.DeQuizQuizRepo;
 
 @Component
 public class DeQuizQuizDAO {

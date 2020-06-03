@@ -1,8 +1,6 @@
 package com.simple.pkg.DTO;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Transient;
 
@@ -10,7 +8,6 @@ import javax.persistence.Transient;
 @Entity
 public class DeQuizUser {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer dquUserId;
 	private Integer dquQuizId;
 	private String dquUserName;
@@ -23,9 +20,6 @@ public class DeQuizUser {
 	private String dquCorrectAns;
 	@Transient
 	private Integer dquQuestionNo;
-	
-	//@ManyToOne
-	//private DeQuizMaster dequizmaster;
 	
 	public Integer getDquUserId() {
 		return dquUserId;

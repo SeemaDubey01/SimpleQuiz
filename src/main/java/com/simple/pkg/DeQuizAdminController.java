@@ -7,12 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import com.simple.pkg.SQevent.DeQuizEventPublisher;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
+
+import com.simple.pkg.SQevent.DeQuizAdminPublisher;
 
 @Controller
-public class SimpleQuizEventController {
+public class DeQuizAdminController {
 	@Autowired
-	DeQuizEventPublisher deQuizEventPublisher;
+	DeQuizAdminPublisher deQuizAdminPublisher;
 	
 	@GetMapping("/publisher")
 	private String startPublishing(Model model) {
@@ -20,10 +22,21 @@ public class SimpleQuizEventController {
 		
 		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 		message = "Publishing time:" + timestamp;
+		if (deQuizAdminPublisher.getAdminEmitter() == null) {
+			deQuizAdminPublisher.registerAdmin();
+		}
 		model.addAttribute("message", message);
-		deQuizEventPublisher.publishMessage(message);
 		return "publisher";
 	}
+	
+	@GetMapping("/publisherevent")
+	public SseEmitter publisherevent() {
+		if (deQuizAdminPublisher.getAdminEmitter() == null) {
+			deQuizAdminPublisher.registerAdmin();
+		}
+		return deQuizAdminPublisher.getAdminEmitter();
+	}
+	
 
 	@GetMapping("/listener")
 	public String startListening(@ModelAttribute("message") String message, Model model) {

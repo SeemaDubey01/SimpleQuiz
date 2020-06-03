@@ -1,23 +1,17 @@
 package com.simple.pkg;
 
-import java.net.InetAddress;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
-import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.simple.pkg.DTO.DeQuizMaster;
 import com.simple.pkg.DTO.DeQuizTest;
 import com.simple.pkg.DTO.DeQuizUser;
-import com.simple.pkg.repo.DeQuizMasterDBRepo;
-import com.simple.pkg.repo.DeQuizTestDBRepo;
-import com.simple.pkg.repo.DeQuizUserDBRepo;
 
 @Controller
 public class SimpleQuizController {
@@ -29,11 +23,8 @@ public class SimpleQuizController {
 	DeQuizTestDBRepo quizTRepo;
 	
 	@RequestMapping("/")
-	public String index(HttpSession session) throws Exception{
-		String session1 = session.getId();
-		String ip = InetAddress.getLoopbackAddress().getHostAddress();
-		System.out.println("inside index " + session1);
-		System.out.println("IP address is:  " + ip);
+	public String index(){
+		System.out.println("Home page");
 		return "index";
 	}
 	@RequestMapping("/index")

@@ -1,8 +1,9 @@
 package com.simple.pkg.DAO;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import com.simple.pkg.DeQuizMasterDBRepo;
 import com.simple.pkg.DTO.DeQuizMaster;
-import com.simple.pkg.repo.DeQuizMasterDBRepo;
 
 
 public class DeQuizMasterDAO {
